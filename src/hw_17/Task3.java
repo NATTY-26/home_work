@@ -1,6 +1,7 @@
 package hw_17;
 
 import java.util.Random;
+import java.util.Arrays;
 
 public class Task3 {
     public static void main(String[] args) {
@@ -11,22 +12,9 @@ public class Task3 {
             arr[i] = random.nextInt(101) - 50;
             System.out.println("arr[" + i + "] = " + arr[i]);
         }
+        Arrays.sort(arr);
+        System.out.println("Минимальный элемент: " + arr[0]);
+        System.out.println("Максимальный элемент: " + arr[arr.length - 1]);
 
-        int min = arr[0];
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-            }
-        }
-
-        int max = arr[0];
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-            }
-        }
-
-        System.out.println("Минимальный элемент: " + min);
-        System.out.println("Максимальный элемент: " + max);
     }
 }

@@ -1,26 +1,24 @@
 package hw_17;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+
 public class Task4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Введите четное число - размер массива: ");
-        int size = input.nextInt();
-
-        if (size % 2 != 0) {
-            System.out.println("Число должно быть четным!");
-            return;
-        }
-
+        int size;
+        do {
+            System.out.println("Введите чётное число - размер массива: ");
+            size = input.nextInt();
+        } while (size % 2 != 0);
         int[] arr = new int[size];
         Random random = new Random();
 
         for (int i = 0; i < size; i++) {
             arr[i] = random.nextInt(101);
         }
-
         System.out.println("Исходный массив: " + Arrays.toString(arr));
 
         int mid = size / 2;

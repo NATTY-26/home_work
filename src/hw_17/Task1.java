@@ -9,7 +9,7 @@ public class Task1 {
         String[] places = {"школу", "магазин", "церковь", "тренажерный зал", "кино", "поликлинику"};
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Введите три числа от 0 до 6 через пробел:");
+        System.out.println("Введите, пожалуйста, три числа от 0 до 6 через пробел:");
         int index1 = input.nextInt();
         int index2 = input.nextInt();
         int index3 = input.nextInt();
@@ -18,6 +18,6 @@ public class Task1 {
         int time = times[index2];
         String place = places[index3];
 
-        System.out.printf("%s будет идти в %s в %d:00", name, place, time);
+        System.out.printf("%1$s будет идти в %2$s в %3$d:00", name, place, time);
     }
 }
